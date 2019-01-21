@@ -1,0 +1,3 @@
+This is a short test to create an animated banner ad with the dimensions 300x250px, using the files in the template folder. We would recommend that you use the Greensock library for the animation but if you have another preferred JavaScript library feel free to use it, or don’t use any at all!
+
+Please see thea video example (video-brief.swf) showing what the final banner should look like and how it should animate. You may need to download an SWF compatible video player to watch this.
