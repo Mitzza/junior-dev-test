@@ -6,17 +6,140 @@
 	<meta name="ad.size" content="width=300, height=250">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>StarLeaf 300x250 Banner</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript">
 		var clickTag = "";
 	</script>
+
+	<style media="screen">
+		a.main-b {
+			width: 300px;
+			height: 250px;
+			background: #fff;
+			display: block;
+			overflow: hidden;
+			border: 1px solid #ccc;
+		}
+		.banner {
+			justify-content: space-evenly;
+		}
+		.banner2 {
+			justify-content: center;
+		}
+		.banner,
+		.banner2 {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			height: 100%;
+			width: 100%;
+		}
+		.first {
+			height: 55px;
+		}
+		.second {
+			height: 70px;
+		}
+		.last {
+			height: 50px;
+		}
+		.inner-container {
+			height: 68px
+		}
+	</style>
 </head>
 
 <body>
-	<a href="javascript:window.open(window.clickTag)">
-		<div id="banner" class="size" style="display:none;opacity:0;">
+	<a class="main-b" href="javascript:window.open(window.clickTag)">
+		<section id="banner" class="banner banner1">
+			<div class="first">
+				<img src="images/logo.png" alt="logo image">
+			</div>
+			<div class="second">
+				<img src="images/copy5.png" alt="Engeneered to make meeting simple">
+			</div>
+			<div class="last">
+				<img src="images/cta.png" alt="Discover now">
+			</div>
+		</section>
 
-		</div>
+		<section id="banner2" class="banner2 banner hide">
+			<div class="inner-container">
+				<img id="meet" src="images/copy1.png" alt="meet">
+				<img id="connect" class="hide" src="images/copy2.png" alt="connect">
+				<img id="share" class="hide" src="images/copy3.png" alt="share">
+				<img id="message" class="hide" src="images/copy4.png" alt="message">
+			</div>
+			<img src="images/copy0.png" alt="in an instant">
+		</section>
+
+		<section id="banner3"  class="banner banner3 hide">
+			<div class="first">
+				<img  src="images/logo.png" alt="logo image">
+			</div>
+			<div class="second">
+				<img id="meeting" class="hide" src="images/copy5.png" alt="Engeneered to make meeting simple">
+			</div>
+			<div class="last">
+				<img id="discover" class="hide" src="images/cta.png" alt="Discover now">
+			</div>
+		</section>
 	</a>
+
+	<script type="text/javascript">
+			$( document ).ready(function() {
+
+			   var $banner = $("#banner");
+			   var $banner2 = $("#banner2");
+				 var $banner3 = $("#banner3");
+				 var $meet = $("#meet");
+				 var $connect = $("#connect");
+				 var $share = $("#share");
+				 var $message = $("#message")
+				 var $meeting = $("#meeting");
+				 var $discover = $("#discover");
+				 var $hide = $(".hide")
+
+				 $hide.hide();
+
+				 setTimeout(function(){
+					  $banner.fadeOut();
+						$banner2.fadeIn();
+					}, 1500);
+
+				  setTimeout(function(){
+					 	$meet.fadeOut();
+				  }, 2000);
+
+				 	setTimeout(function(){
+						 $connect.fadeIn()
+						 $connect.fadeOut()
+					 }, 2500);
+
+					setTimeout(function(){
+						 	$share.fadeIn()
+							$share.fadeOut()
+					 }, 3400);
+
+					 setTimeout(function(){
+							 $message.fadeIn()
+						}, 4400);
+
+					 setTimeout(function(){
+						   $banner2.fadeOut()
+							 $banner3.fadeIn()
+						}, 5000);
+
+						setTimeout(function(){
+								$meeting.fadeIn()
+						 }, 6000);
+
+						 setTimeout(function(){
+								 $discover.fadeIn();
+							}, 7000);
+
+			});
+	</script>
 </body>
 
 </html>
